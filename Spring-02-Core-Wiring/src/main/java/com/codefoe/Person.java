@@ -1,2 +1,11 @@
-package com.codefoe;public class Person {
+package com.codefoe;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Person {
+    private String name;
+    private Car car;
 }

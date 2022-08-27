@@ -1,4 +1,4 @@
-package com.codefoe.bean_annotation;
+package com.codefoe.stereotype_annotation;
 
 import org.springframework.stereotype.Component;
 
