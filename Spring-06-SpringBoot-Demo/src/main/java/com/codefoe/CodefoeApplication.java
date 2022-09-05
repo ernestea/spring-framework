@@ -10,7 +10,6 @@ import org.springframework.context.ApplicationContext;
 public class CodefoeApplication {
 
 	public static void main(String[] args) {
-
 		Comment comment = new Comment();
 		comment.setAuthor("Brown");
 		comment.setText("Spring Framework");
