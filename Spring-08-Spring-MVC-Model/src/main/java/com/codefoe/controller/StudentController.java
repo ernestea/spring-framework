@@ -1,5 +1,6 @@
 package com.codefoe.controller;
 
+import com.codefoe.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,9 +22,13 @@ public class StudentController {
 
         List<Integer> numbers = new ArrayList<>();
         for(int i = 0; i< 10; i++) {
-            numbers.add(random.nextInt(0,10000));
+            numbers.add(i + 2);
         }
         model.addAttribute("numbers", numbers);
+
+
+        Student student = new Student(id, "Michael", "Dresden");
+        model.addAttribute("student", student);
 
 
         return "/student/welcome";
