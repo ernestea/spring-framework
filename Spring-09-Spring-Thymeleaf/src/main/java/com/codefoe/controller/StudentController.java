@@ -3,6 +3,7 @@ package com.codefoe.controller;
 import com.codefoe.bootstrap.DataGenerator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,13 +11,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/student")
 public class StudentController {
 
-    @RequestMapping("/register")
+    @GetMapping("/register")
     public String register(Model model) {
         model.addAttribute("students", DataGenerator.createStudent());
         return "student/register";
     }
-@RequestMapping ("/welcome")
+
+    @GetMapping("/welcome")
     public String info(Model model) {
-    return "student/welcome";
+        return "student/welcome";
     }
+
+
 }
